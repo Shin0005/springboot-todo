@@ -1,0 +1,34 @@
+### 全タスク取得
+GET http://localhost:8080/api/tasks
+
+### タスク作成
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Spring Bootの勉強",
+  "description": "CRUDアプリを完成させる",
+  "completed": false
+}
+
+### 特定タスク取得（IDを指定）
+GET http://localhost:8080/api/tasks/1
+
+### タスク更新
+PUT http://localhost:8080/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Spring Bootマスター",
+  "description": "完了!",
+  "completed": true
+}
+
+### 完了状態切り替え
+PATCH http://localhost:8080/api/tasks/1/toggle
+
+### タスク削除
+DELETE http://localhost:8080/api/tasks/1
+
+### 完了済みタスクのみ取得
+GET http://localhost:8080/api/tasks?completed=true
