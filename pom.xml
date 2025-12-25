@@ -19,7 +19,7 @@
     <description>Simple Task Management API</description>
     
     <properties>
-        <java.version>23</java.version>
+        <java.version>21</java.version>
     </properties>
     
     <dependencies>
@@ -35,17 +35,22 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         
-        <!-- PostgreSQL Driver -->
+        <!-- sqlite -->
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
         </dependency>
         
         <!-- Validation (バリデーション用) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        
+        <!-- hibernate -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-community-dialects</artifactId>
         </dependency>
     </dependencies>
     

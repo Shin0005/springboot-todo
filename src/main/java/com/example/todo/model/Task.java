@@ -14,14 +14,13 @@ public class Task {
     private Long id;
     
     @NotBlank(message = "タイトルは必須です")
-    @Column(nullable = false)
     private String title;
     
     @Column(length = 1000)
     private String description;
     
     @Column(nullable = false)
-    private Boolean completed = false;
+    private Boolean completed;
     
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
